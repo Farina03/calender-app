@@ -23,11 +23,11 @@ const MainPage = () => {
   console.log(selectedDate)
   return (
     <div>
-      <Navbar />
+      <Navbar setActiveDate={setActiveDate} activeDate={activeDate}/>
       <div className='bars-and-grids'>
-        <LeftBar />
+        <LeftBar setActiveDate={setActiveDate} activeDate={activeDate} selectedDate={selectedDate}/>
         {console.log(activeDate)}
-        <CalenderGrid selectedDate={selectedDate} activeDate={activeDate}/>
+        <CalenderGrid setSelectedDate={setSelectedDate} selectedDate={selectedDate} activeDate={activeDate}/>
         <RightBar />
       </div>
     </div>

@@ -1,6 +1,6 @@
 .calender-outer-div {
     flex: 9;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 .week-outer-div {
     display: grid;

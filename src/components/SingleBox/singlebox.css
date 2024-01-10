@@ -4,4 +4,36 @@
     /* height: 150px; */
     border-bottom: .5px solid gray;
     border-right: .5px solid gray;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+.singlebox-inner-div {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.singlebox-inner-div:hover {
+    background-color: #F1EFEF;
+    transition: all .3s ease;
+}
+.today {
+    background-color: #AAD9BB;
+}
+.diffmonth {
+    color: rgba(0,0,0,.25);
+    background-color: transparent;
+}
+.nonselected {
+    background-color: transparent;
+}
+.selected {
+    background-color: #B4D4FF;
+}
+.today-selected {
+    background-color: #B4D4FF;
 }

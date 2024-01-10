@@ -1,4 +1,42 @@
 .navbar-outer-div {
-    height: 70px;
+    /* height: 70px; */
+    height: 10vh;
     border-bottom: .5px solid gray;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+.leftside-elements {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+.title {
+    font-size: 24px;
+    padding-right: 30px;
+    color: #4F6F52;
+}
+.navigation-button {
+    height: 20px;
+    width: 35px; 
+}
+.rightside-elements {
+    margin-right: 20px;
+}
+.today-btn {
+    height: 30px;
+    width: 70px;
+    border: none;
+    background-color: #EEF5FF;
+    border-radius: 3px;
+    border: .5px solid gray;
+    color: gray;
+}
+.today-btn:hover {
+    transform: scale(110%);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
