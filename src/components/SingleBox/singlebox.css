@@ -1,0 +1,7 @@
+.singlebox-outer-div {
+    height: auto;
+    width: auto;
+    /* height: 150px; */
+    border-bottom: .5px solid gray;
+    border-right: .5px solid gray;
+}
