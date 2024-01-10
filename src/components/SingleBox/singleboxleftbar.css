@@ -1,39 +1,38 @@
-.mainpage-singlebox-outer-div {
+.leftbar-singlebox-outer-div {
     height: auto;
     width: auto;
-    /* height: 150px; */
-    border-bottom: .5px solid gray;
-    border-right: .5px solid gray;
     display: flex;
     justify-content: center;
-    padding-top: 5px;
+    font-size: 10px;
 }
-.mainpage-singlebox-inner-div {
-    height: 32px;
-    width: 32px;
+.leftbar-singlebox-inner-div {
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
-.mainpage-singlebox-inner-div:hover {
-    background-color: #F1EFEF;
+.leftbar-singlebox-inner-div:hover {
+    /* background-color: #F1EFEF; */
+    background-color: #EEF5FF;
+    /* background-color: #B4D4FF; */
     transition: all .3s ease;
 }
-.mainpage-today {
+.leftbar-today {
     background-color: #AAD9BB;
 }
-.mainpage-diffmonth {
+.leftbar-diffmonth {
     color: rgba(0,0,0,.25);
     background-color: transparent;
 }
-.mainpage-nonselected {
+.leftbar-nonselected {
     background-color: transparent;
 }
-.mainpage-selected {
+.leftbar-selected {
     background-color: #B4D4FF;
 }
-.mainpage-today-selected {
+.leftbar-today-selected {
     background-color: #B4D4FF;
 }

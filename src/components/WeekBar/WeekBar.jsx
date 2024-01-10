@@ -1,10 +1,11 @@
 import React from 'react'
 import './weekbar.css'
+import './weekleftbar.css'
 
-const WeekBar = ({weekDays, selectedDate, activeDate}) => {
+const WeekBar = ({classPrefix, weekDays, selectedDate, activeDate}) => {
 
   return (
-    <div className='weekbar-inner-div'>{weekDays}</div>
+    <div className= {`${classPrefix}-weekbar-inner-div`} >{weekDays}</div>
   )
 }
 

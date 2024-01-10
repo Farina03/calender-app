@@ -3,9 +3,29 @@
     border-right: .5px solid gray;
     max-height: 95vh;
     min-width: 150px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 15px;
+    row-gap: 15px;
 }
-.small-comp-div {
-    height: 200px;
-    width: inherit;
-    background-color: gray;
+.leftbar-navigation-outer-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+.event-create-btn {
+    height: 40px;
+    width: 100px;
+    border-radius: 40px;
+    border: .5px solid gray;
+    margin-left: 10px;
+    background-color:#EEF5FF;
+}
+.event-create-btn:hover {
+    transform: scale(105%);
+    transition: all .3s ease;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.19);
+    
 }

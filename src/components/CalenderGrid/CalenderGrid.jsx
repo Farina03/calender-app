@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './calendergrid.css'
 import SingleBox from '../SingleBox/SingleBox'
 import WeekBar from '../WeekBar/WeekBar'
+import './calenderleftbar.css'
 import { format, 
         addDays,
         startOfWeek,
@@ -14,7 +15,7 @@ import { format,
         subMonths,
         getWeek} from 'date-fns'
 
-const CalenderGrid = ({setSelectedDate, setActiveDate, selectedDate, activeDate}) => {
+const CalenderGrid = ({classPrefix, setSelectedDate, setActiveDate, selectedDate, activeDate}) => {
   // useEffect(() => {
   //   getDates()
   // },[])
@@ -64,20 +65,20 @@ const CalenderGrid = ({setSelectedDate, setActiveDate, selectedDate, activeDate}
     
   }
   return (
-      <div className='calender-outer-div'>
-        <div className='week-outer-div'>
+      <div className={`${classPrefix}-calender-outer-div`}>
+        <div className={`${classPrefix}-week-outer-div`}>
           {weekDays.map(item => {
             console.log(item)
             return (
-              <WeekBar setActiveDate={setActiveDate} weekDays={item} selectedDate={selectedDate} activeDate={activeDate}/>
+              <WeekBar classPrefix={classPrefix} setActiveDate={setActiveDate} weekDays={item} selectedDate={selectedDate} activeDate={activeDate}/>
             )
           })}
         </div>
-        <div className='calender-inner-div'>
+        <div className={`${classPrefix}-calender-inner-div`}>
           {getDates()}
           {allWeeks.map((item) => {
             return (
-              <SingleBox setSelectedDate={setSelectedDate} dates={item}/>
+              <SingleBox classPrefix={classPrefix} setSelectedDate={setSelectedDate} dates={item}/>
             )
           })}
         </div>

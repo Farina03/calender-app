@@ -27,7 +27,7 @@ const MainPage = () => {
       <div className='bars-and-grids'>
         <LeftBar setActiveDate={setActiveDate} activeDate={activeDate} selectedDate={selectedDate}/>
         {console.log(activeDate)}
-        <CalenderGrid setSelectedDate={setSelectedDate} selectedDate={selectedDate} activeDate={activeDate}/>
+        <CalenderGrid classPrefix="mainpage" setSelectedDate={setSelectedDate} selectedDate={selectedDate} activeDate={activeDate}/>
         <RightBar />
       </div>
     </div>

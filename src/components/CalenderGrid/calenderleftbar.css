@@ -1,12 +1,13 @@
-.mainpage-calender-outer-div {
-    flex: 9;
-    min-height: 90vh;
+.leftbar-calender-outer-div {
+    /* flex: 9; */
+    /* padding-top: 20px; */
+    min-height: 20vh;
 }
-.mainpage-week-outer-div {
+.leftbar-week-outer-div {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
-.mainpage-calender-inner-div {
+.leftbar-calender-inner-div {
     /* flex: 9; */
     display: grid;
     min-height: inherit;
