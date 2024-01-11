@@ -1,0 +1,25 @@
+.modal-outer-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.event-input {
+    height: 40px;
+    width: 200px;
+    border: .5px solid gray;
+    margin: 10px;
+}
+.event-btn {
+    height: 40px;
+    width: 90px;
+    border: .5px solid gray;
+    background-color: white;
+    color: gray;
+    transition: all .3s ease;
+    border-radius: 3px;
+}
+.event-btn:hover {
+    transform: scale(105%);
+    background-color: #EEF5FF;
+}

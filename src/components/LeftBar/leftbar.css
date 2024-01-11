@@ -2,9 +2,9 @@
     flex: 1.5;
     border-right: .5px solid gray;
     max-height: 95vh;
-    min-width: 150px;
+    min-width: 200px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     padding-top: 15px;
     row-gap: 15px;
@@ -13,14 +13,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
+    margin-right: auto;
+    padding-left: 20px;
 }
 .event-create-btn {
     height: 40px;
     width: 100px;
     border-radius: 40px;
     border: .5px solid gray;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     background-color:#EEF5FF;
 }
 .event-create-btn:hover {

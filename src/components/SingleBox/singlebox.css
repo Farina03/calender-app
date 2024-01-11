@@ -37,3 +37,12 @@
 .mainpage-today-selected {
     background-color: #B4D4FF;
 }
+.event-outer-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.event-inner-div {
+
+}

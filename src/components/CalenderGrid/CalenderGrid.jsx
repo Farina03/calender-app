@@ -15,20 +15,22 @@ import { format,
         subMonths,
         getWeek} from 'date-fns'
 
-const CalenderGrid = ({classPrefix, setSelectedDate, setActiveDate, selectedDate, activeDate}) => {
+const CalenderGrid = ({classPrefix, eventTracker, setSelectedDate, setActiveDate, selectedDate, activeDate}) => {
   // useEffect(() => {
   //   getDates()
   // },[])
   const weekStartDate = startOfWeek(activeDate)
   const weekDays = []
   for(let i = 0; i < 7; i++) {
+    classPrefix === "leftbar" ? 
+    weekDays.push(format(addDays(weekStartDate, i), "E")) :
     weekDays.push(format(addDays(weekStartDate, i), "E"))
   }
   const allWeeks = []
   const datesForCurrentWeek = (date, selectedDate, activeDate) => { //generateDatesForCurrentWeek
     let currentDate = date
     for(let i = 0; i < 7; i++) {
-      const cloneDate = currentDate
+      const cloneDate = format(currentDate, "dd-MM-yyyy")
       let dateLabel = ""
       if(isSameMonth(currentDate, activeDate)) {
         if(isSameDay(currentDate, activeDate)) {
@@ -42,6 +44,8 @@ const CalenderGrid = ({classPrefix, setSelectedDate, setActiveDate, selectedDate
       }
       else dateLabel = "diffmonth"
       allWeeks.push([format(currentDate, "d"), dateLabel, cloneDate])
+      //console.log(cloneDate, "clonedate")
+      //console.log(format(cloneDate, "dd-MM-yyyy"))
       currentDate = addDays(currentDate, 1)
     }
   }
@@ -68,9 +72,9 @@ const CalenderGrid = ({classPrefix, setSelectedDate, setActiveDate, selectedDate
       <div className={`${classPrefix}-calender-outer-div`}>
         <div className={`${classPrefix}-week-outer-div`}>
           {weekDays.map(item => {
-            console.log(item)
             return (
-              <WeekBar classPrefix={classPrefix} setActiveDate={setActiveDate} weekDays={item} selectedDate={selectedDate} activeDate={activeDate}/>
+              <WeekBar classPrefix={classPrefix} setActiveDate={setActiveDate} 
+                weekDays={item} selectedDate={selectedDate} activeDate={activeDate}/>
             )
           })}
         </div>
@@ -78,7 +82,8 @@ const CalenderGrid = ({classPrefix, setSelectedDate, setActiveDate, selectedDate
           {getDates()}
           {allWeeks.map((item) => {
             return (
-              <SingleBox classPrefix={classPrefix} setSelectedDate={setSelectedDate} dates={item}/>
+              <SingleBox classPrefix={classPrefix} eventTracker={eventTracker} 
+                          setSelectedDate={setSelectedDate} dates={item}/>
             )
           })}
         </div>
