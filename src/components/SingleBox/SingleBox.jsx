@@ -38,12 +38,15 @@ const SingleBox = ({classPrefix, eventTracker, dates, setSelectedDate}) => {
                   <div>{eventTracker[dates[2]]}</div>
               )})} */}
           </div>
-          <div className='event-outer-div'>
+          <div className={`${classPrefix}-event-outer-div`}>
           {!!eventTracker && Object.keys(eventTracker).map(item => {
               if(item === dates[2])
-                return (
-                  <div className='event-inner-div'>{eventTracker[dates[2]]}</div>
-          )})}
+              return (
+                eventTracker[dates[2]].map( event => {
+                  return (<div className={`${classPrefix}-event-inner-div ${dates[1]}`}>{event}</div>)
+                })
+              )    
+          })}
           </div>
           
         </div> 
@@ -52,4 +55,5 @@ const SingleBox = ({classPrefix, eventTracker, dates, setSelectedDate}) => {
 
 export default SingleBox
 
+//eventTracker[dates[2]]
 //eventTracker[dates[2]]

@@ -33,16 +33,22 @@ const CalenderGrid = ({classPrefix, eventTracker, setSelectedDate, setActiveDate
       const cloneDate = format(currentDate, "dd-MM-yyyy")
       let dateLabel = ""
       if(isSameMonth(currentDate, activeDate)) {
-        if(isSameDay(currentDate, activeDate)) {
+        //if(isSameDay(currentDate, activeDate)) {
           // if(isSameDay(activeDate, selectedDate))
           //   dateLabel = "today-selected"
-          dateLabel = "today"
-        } 
-        else if(isSameDay(currentDate, selectedDate))
+          //dateLabel = "today"
+       // } 
+        // else if(isSameDay(currentDate, selectedDate))
+        //   dateLabel = "selected"
+        if(!! eventTracker && eventTracker[cloneDate])
           dateLabel = "selected"
         else dateLabel = "nonselected"
+        if(isSameDay(currentDate, activeDate)) {
+          dateLabel = "today"
+        } 
       }
       else dateLabel = "diffmonth"
+      
       allWeeks.push([format(currentDate, "d"), dateLabel, cloneDate])
       //console.log(cloneDate, "clonedate")
       //console.log(format(cloneDate, "dd-MM-yyyy"))
