@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar/Navbar'
 import LeftBar from '../LeftBar/LeftBar'
 import RightBar from '../RightBar/RightBar'
@@ -19,7 +19,13 @@ import EventModal from '../EventModal/EventModal'
 const MainPage = () => {
   const [selectedDate, setSelectedDate] = useState("")
   const [activeDate, setActiveDate] = useState(new Date())
-  const [eventTracker, setEventTracker] = useState(null)
+  const [eventTracker, setEventTracker] = useState(() => {
+    return JSON.parse(localStorage.getItem('eventTracker')) || null
+  })
+  useEffect(() => {
+    localStorage.setItem('eventTracker', JSON.stringify(eventTracker))
+  }, [eventTracker])
+  
   let eventTrigger = (selectedDate !== "" ) ? true : false
   return (
     <div>
